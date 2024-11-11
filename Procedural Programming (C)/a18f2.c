@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 
-#define StackLimit 25
+#define StackLimit 6
 
 
 typedef int StackElementType;
@@ -27,36 +27,55 @@ void Push(StackType *Stack, StackElementType Item);
 void Pop(StackType *Stack, StackElementType *Item);
 boolean EmptyStack(StackType Stack);
 boolean FullStack(StackType Stack);
-int GetNthElementA(StackType Stack, int n);
-int GetNthElementB(StackType Stack, int n);
-void printStack(StackType Stack);
+int StackMin(StackType Stack, int newNum);
 
-int main()
+
+int main ()
 {
-    StackElementType i,n,x, number = 0;
-    StackType S;
+    StackElementType i,x,j;
+    StackType S,minS;
     CreateStack(&S);
+    CreateStack(&minS);
 
-    for (i=2; i<=StackLimit*2; i+=2)
+    for(i=1;i<=StackLimit;i++)
     {
-        number = i;
-        Push(&S, number);
+        printf("Dwse to epomeno stoixeio: ");
+        scanf("%d",&x);
+        Push(&S, x);
+        printf("plithos sto stack %d\n",i);
+        for(j=0;j<i;j++)
+        {
+            printf("%d ",S.Element[j]);
+        }
+
+        if(EmptyStack(minS)||S.Element[S.Top]<=minS.Element[minS.Top])
+        {
+            Push(&minS, x);
+
+        }
+
+        printf("\nMin=%d \n",minS.Element[minS.Top]);
     }
 
-    printStack(S);
+    printf("\nEmptying stack\n");
+    for(i=5;i>=0;i--)
+    {
+        if(S.Element[S.Top]==minS.Element[minS.Top])
+        {
+            Pop(&minS, &minS.Element[minS.Top]);
+        }
+        Pop(&S, &S.Element[S.Top]);
 
-    printf("Dwse n: ");
-    scanf("%d",&n);
-
-    printf("Top with GetNthElementA = %d\n", GetNthElementA(S,n));;
-
-    printStack(S);
-    printf("Top with GetNthElementB = %d\n",GetNthElementB(S,n));
-    printStack(S);
-
+        printf("Min= %d",minS.Element[minS.Top]);
+        printf("\nplithos sto stack %d\n",i);
+        for(j=0;j<i;j++)
+        {
+            printf("%d ",S.Element[j]);
+        }
+        printf("\n");
+    }
     return 0;
 }
-
 
 void CreateStack(StackType *Stack)
 {
@@ -95,36 +114,7 @@ void Pop(StackType *Stack, StackElementType *Item)
         printf("Empty Stack...");
 }
 
-
-int GetNthElementA(StackType Stack, int n)
+int StackMin(StackType Stack, int newNum)
 {
-    StackType tempS;
-    StackElementType i,x;
-    CreateStack(&tempS);
 
-    for(i=0;i<n;i++)
-    {
-        Pop(&Stack, &x);
-        Push(&tempS, x);
-    }
-    return x;
-}
-
-
-int GetNthElementB(StackType Stack, int n)
-{
-    return Stack.Element[StackLimit-n];
-}
-
-
-void printStack(StackType Stack)
-{
-    int i;
-    printf("plithos sto stack %d\n",StackLimit);
-
-    for(i=0;i<StackLimit;i++)
-    {
-        printf("%d ",Stack.Element[i]);
-    }
-    printf("\n");
 }
