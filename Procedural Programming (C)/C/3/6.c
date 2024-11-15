@@ -9,12 +9,11 @@ main(){
         printf("%d", a);
     else
         printf("%d %d ", a, b);
-        for (i=2; i<N; i++)
-            {
-                c = a + b;
-                a = b;
-                b = c;
-                printf("%d ", c);
-            }
+        for (i=2; i<N; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+            printf("%d ", c);
+        }
     return 0;
 }
