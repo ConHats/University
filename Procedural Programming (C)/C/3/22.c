@@ -7,8 +7,7 @@ main(){
     printf("Enter number : ");
     N = GetInteger();
     printf("The decreasing sequence is: ");
-    for(i=N; i>=1; i--)
-    {
+    for(i=N; i>=1; i--) {
         printf("%d,", i);
     }
     printf("0");
