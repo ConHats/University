@@ -10,8 +10,7 @@ main(){
     long years, total;
     total = tour;
     years = 0;
-    while (total>=limit)
-    {
+    while (total>=limit) {
         total = ceil(total*(1-rate));
         years++;
     }
