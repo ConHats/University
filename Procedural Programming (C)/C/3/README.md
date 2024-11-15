@@ -15,6 +15,8 @@
 
 * [17.c](./17.c): Prints the values of the function f(x)=x4−5x2+3f(x)=x4−5x2+3 for xx values from 0 to 1, incrementing by 0.05 at each step. The loop computes the function for each xx and outputs the result in the format "x = value, f(x) = result.
 
+*[18.c](./18.c): Repeatedly asks for an amount input and sums up the amounts until the total reaches at least 100,000. It tracks the number of people, the total amount, the largest amount entered, and the smallest amount entered during the process.
+
 * [19.c](./19.c): Searches the greatest common divisor (GCD) of two numbers using the Euclidean algorithm. It checks if the second number is greater than the first, swaps them if necessary, and then uses the algorithm to compute the GCD until the remainder r becomes zero. The program then prints the GCD of the two numbers.
 
 * [1a.c](./1a.c): Calculates how many years it will take for the number of cars to exceed a specified limit, given a 7% annual growth rate. It outputs the number of years and the final car count.
