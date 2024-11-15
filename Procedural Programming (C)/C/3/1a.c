@@ -10,11 +10,10 @@ main(){
     long years, carrent;
     carrent = cars;
     years=0;
-    while(carrent<=limit)
-        {
-            carrent = ceil(carrent*(1+rate));
-            years++;
-        }
+    while(carrent<=limit) {
+        carrent = ceil(carrent*(1+rate));
+        years++;
+    }
     printf("%ld\n%ld\n", years, carrent);
     return 0;
 }
