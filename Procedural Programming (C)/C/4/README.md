@@ -34,7 +34,7 @@
 
 * [26.c](./26.c): Defines two functions f(x) and g(x, y) and performs nested calculations. It computes f(x), then g(x, y), and finally applies f to the result of g(x, y), printing each step's output based on user input for x and y.
 
-*[27.c](./27.c): Provides a program for encoding and verifying a sequence of numbers with a custom encoding system. It takes a lower and upper limit from the user, generates an encoding for each number in that range, and checks whether the encoded value is valid based on a specific modulus operation. 
+* [27.c](./27.c): Provides a program for encoding and verifying a sequence of numbers with a custom encoding system. It takes a lower and upper limit from the user, generates an encoding for each number in that range, and checks whether the encoded value is valid based on a specific modulus operation. 
 
 * [28.c](./28.c): Computes the total cost of items, including discounts and loyalty points, based on a passcode input. It allows the user to enter a passcode and item price, applies a discount based on the passcode, computes the discounted price, and accumulates total costs and loyalty points until the user exits with a passcode of 0.
 
