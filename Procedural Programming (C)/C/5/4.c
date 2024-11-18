@@ -57,15 +57,11 @@ int main(){
             printf(" %ld", collection[i]);
         }
     printf("\nSupply/Seller:");
-    for (i=0; i<4; i++)
-        {
-            supply = 0;
-            for (j=0; j<5; j++)
-                {
-                    supply = collection[i]*10/100;
-                }
-            printf(" %.2f", supply);
-        }
+    for (i=0; i<4; i++) {
+        supply = collection[i] * 10 / 100; // Calculate 10% of the total collection for each seller
+        printf(" %.2f", supply);
+    }
+
     printf("\nAmount of products:");
     for (j=0; j<5; j++)
         {
