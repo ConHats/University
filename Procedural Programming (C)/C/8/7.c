@@ -41,21 +41,21 @@ int main(){
 int get_data(car_rentalT rentals[])
 {
     int i, rent_number;
-    printf("Dose ton arithmo enoikiaseon: ");
+    printf("Enter the number of rentals: ");
     rent_number = GetInteger();
     for(i=0; i<rent_number; i++)
         {
-            printf("\nDose ta stoixeia tis enoikiasis %d\n", i);
+            printf("\nEnter rental details for %d\n", i);
             rentals[i].number = i;
-            printf("Dose marka: ");
+            printf("Enter brand: ");
             gets(rentals[i].type);
-            printf("Dose kyvika: ");
+            printf("Enter cubic capacity: ");
             rentals[i].cc = GetInteger();
-            printf("Dose onoma pelati: ");
+            printf("Enter customer name: ");
             gets(rentals[i].name);
-            printf("Dose imeres enoikiasis: ");
+            printf("Enter number of rental days: ");
             rentals[i].days = GetInteger();
-            printf("Dose timi ana imera: ");
+            printf("Enter daily rate: ");
             rentals[i].daily_rate = GetReal();
         }
     return rent_number;
