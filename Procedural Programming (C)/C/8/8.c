@@ -16,17 +16,17 @@ int main(){
     ReadFill(&cuboid);
     FindAr(&cuboid);
     FindVol(&cuboid);
-    printf("To emvadon tou koutiou einai %d cm2\n", cuboid.area);
-    printf("O ogos tou koutiou einai %d cm3\n", cuboid.volume);
+    printf("The surface area of the box is %d cm²\n", cuboid.area);
+    printf("The volume of the box is %d cm³\n", cuboid.volume);
     return 0;
 }
 
 void ReadFill(box *cu){
-    printf("Dose to mikos tou koutioy se cm: ");
+    printf("Enter the length of the box in cm: ");
     (*cu).width = GetInteger();
-    printf("Dose to ypsos tou koutioy se cm: ");
+    printf("Enter the height of the box in cm: ");
     (*cu).height = GetInteger();
-    printf("Dose to vathos tou koutioy se cm: ");
+    printf("Enter the depth of the box in cm: ");
     (*cu).depth = GetInteger();
 }
 
